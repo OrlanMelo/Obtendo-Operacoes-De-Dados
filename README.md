@@ -1,2 +1,6 @@
 # Obtendo-Operacoes-De-Dados
-Verificando operações de dados ( E/S ) de dispositivos e processos.
+
+Verificando e obtendo informações de operações E/S de dispositivos e processos.
+
+Tipos de operações:
+ - Leitura, gravação, quantidade de solicitações de E/S em memória do sistema de arquivos e outras informações detalhadas.
