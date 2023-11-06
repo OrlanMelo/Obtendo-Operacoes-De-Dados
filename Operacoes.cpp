@@ -47,11 +47,11 @@ public:
 		if (ObterInformacoesDeDesempenho(Unidade) == true)
 		{
 			
-			long CalcLeituraMB = (double)Performance.BytesRead.QuadPart / (1024 * 1024);
-			//long CalcLeituraGB = (double)Performance.BytesRead.QuadPart / (1024 * 1024 * 1024);
+			LONGLONG CalcLeituraMB = (double)Performance.BytesRead.QuadPart / (1024 * 1024);
+			//LONGLONG CalcLeituraGB = (double)Performance.BytesRead.QuadPart / (1024 * 1024 * 1024);
 
-			long CalcGravacaoMB = (double)Performance.BytesWritten.QuadPart / (1024 * 1024);
-			//long CalcGravacaoGB = (double)Performance.BytesWritten.QuadPart / (1024 * 1024 * 1024);
+			LONGLONG CalcGravacaoMB = (double)Performance.BytesWritten.QuadPart / (1024 * 1024);
+			//LONGLONG CalcGravacaoGB = (double)Performance.BytesWritten.QuadPart / (1024 * 1024 * 1024);
 
 			cout << "Informações do disco selecionado..\n";
 
@@ -77,17 +77,17 @@ public:
 
 		cout << "Operações executadas: " << Processo.ReadOperationCount << " de leituras..\n";
 
-		long CalcMB = (double)Processo.ReadTransferCount / (1024 * 1024);
+		ULONGLONG CalcMB = (double)Processo.ReadTransferCount / (1024 * 1024);
 		cout << "Leituras feitas p/segundo: " << CalcMB << " MB/s..\n";
 
 		cout << "Operações executadas: " << Processo.WriteOperationCount << " de gravações..\n";
 		
-		long CalcMB2 = (double)Processo.WriteTransferCount / (1024 * 1024);
+		ULONGLONG CalcMB2 = (double)Processo.WriteTransferCount / (1024 * 1024);
 		cout << "Gravações p/segundo: " << CalcMB2 << " MB/s..\n";
 
 		cout << "Outras operações de E/S executadas: " << Processo.OtherOperationCount << " operações, exceto leitura e gravação..\n";
 
-		long CalcMB3 = (double)Processo.OtherTransferCount / (1024 * 1024);
+		ULONGLONG CalcMB3 = (double)Processo.OtherTransferCount / (1024 * 1024);
 		cout << "Outras operações diferentes de leitura e gravação: " << CalcMB3 << " em MBs\n";
 	}
 
